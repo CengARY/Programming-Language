@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int x1, x2;
+    double y1, y2;
+    
+    x1 = 6;
+    y1 = 6.7;
+    
+    y2 = (double)6;
+    
+    return 0;
+}
