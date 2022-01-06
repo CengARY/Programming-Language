@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int x;
+    int y;
+    
+    x = 5;
+    cout << x + 2<< endl;
+    
+    y = x + 2;
+    
+    x + 2;
+    
+    cout<< x - 2<< endl;
+    y = x * 2;
+    
+    cout << x / 2<< endl;
+    return 0;
+}
