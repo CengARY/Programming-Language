@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    char ch;
+    
+    cout<<'\n';
+    cout<<endl;
+    
+    ch = '\n';
+    cout<<ch;
+    
+    cout<<"abc"<<'\n';
+    cout<<"abc\n";
+    
+    return 0;
+}
