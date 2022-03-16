@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+class MyClass{
+
+    int x;
+    int y;
+};
+int main(){
+    MyClass myObj;
+    myObj.x = 25;//error
+    myObj.y = 50;//error
+    
+    return 0;
+    
+};
