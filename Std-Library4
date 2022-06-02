@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(int, char**){
+    string s1 = "Hello", s2("Goodbye"), s3, s4(s2, 4, 3);
+    
+    s3 = s1; s3[1] = 'u';
+    
+    cout << s1 << ' ' << s3 << ' ' << s2.length() << '\n';
+    
+    string message = s1 + ',' + " then " + s2;
+     
+    message.replace(7, 4, "and");
+    
+    cout << message << s4 << ' ' << s2.find('G') << '\n';
+}
+//string
