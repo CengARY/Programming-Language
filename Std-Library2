@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+#include <list>
+using namespace std;
+
+
+int main(int, char**){
+    std::list<string> names;
+    names.push_back("sunday");
+    names.push_front("odin");
+    names.push_back("triangle");
+    
+    for(std::list<string>::iterator i = names.begin(); i != names.end(); i++){
+        cout<< *i<< '\n';
+    }
+    return 0;
+}
+// std::list<string>
