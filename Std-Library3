@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+#include <map>
+using namespace std;
+
+int main(int, char**){
+    map<string, int> m;
+    m["Sam"] = 26;
+    m["Christopher"] = 23;
+    m["Ezh"] = 12;
+    cout << m["ciaran"] << '\n';
+    
+    map<string, int>::iterator i = m.find("Ezh");
+    
+    if(i != m.end()){
+        cout<< (*i).second << '\n' << m.size() << '\n';
+    }
+}
+
+//4 different string --> m.size()
+//integer value --> (*i).second
