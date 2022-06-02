@@ -1,0 +1,24 @@
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <stdexcept>
+
+using namespace std;
+
+int main(int, char**){
+    ifstream f;
+    double x;
+    f.open("numbers.txt");
+    if(!f)
+        throw new runtime_error("missing file");
+    while(true){
+        f >> x;
+        if(f.bad()) throw new runtime_error("corrupted");
+        if(f.fail()){
+            if (f.eof())
+            break;
+        else throw new runtime_error("junk");
+        }
+        cout << fixed << setprecision(4) << x << '\n';
+    }
+}
