@@ -1,0 +1,12 @@
+#include <iostream> //Call by Value
+
+void square(int x){
+    x = x * x;
+    std::cout << "The square of x is: " << x << std::endl;
+}
+int main(){
+    int num = 5;
+    square(num);
+    std::cout << "The value of num is now: " << num << std::endl;
+    return 0;
+}
