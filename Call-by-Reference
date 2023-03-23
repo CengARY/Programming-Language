@@ -1,0 +1,13 @@
+#include <iostream> //Call by Reference
+
+void square(int& x){
+    x = x * x;
+    std::cout << "X: " << x << std::endl;
+}
+
+int main(){
+    int num = 5;
+    square(num);
+    std::cout << "Now: " << num << std::endl;
+    return 0;
+}
