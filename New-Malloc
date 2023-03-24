@@ -1,0 +1,27 @@
+#include <iostream> //New vs Malloc ChatGPT
+#include <cstdlib>
+
+using namespace std;
+
+int main() {
+   // Bellekte 10 tane integer değişken için yer ayır
+   int* ptr1 = new int[10];
+   
+   // Bellekte 10 tane integer değişken için yer ayır
+   int* ptr2 = (int*) malloc(10 * sizeof(int));
+   
+   // new operatörü bellek tahsis ederken, malloc fonksiyonu sadece bellek adresi döndürür.
+   // Yani, bellek alanını tutan bir işaretçi döndürür ve bunu tip dönüşümü yaparak int türüne dönüştürmemiz gerekiyor.
+
+   // Bellek alanını kullan
+   for(int i=0; i<10; i++) {
+      ptr1[i] = i+1;
+      ptr2[i] = i+1;
+   }
+   
+   // Bellek alanını serbest bırak
+   delete [] ptr1;
+   free(ptr2);
+   
+   return 0;
+}
