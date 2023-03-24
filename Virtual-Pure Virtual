@@ -1,0 +1,45 @@
+#include <iostream> // Difference between Virtaul function and Pure Virtual Function
+
+class Animal {
+public:
+    virtual void makeSound() {
+        std::cout << "Animal is making a sound." << std::endl;
+    }
+    virtual void move() = 0; // Pure virtual function
+};
+
+class Dog : public Animal {
+public:
+    void makeSound() {
+        std::cout << "Dog is barking." << std::endl;
+    }
+    void move() {
+        std::cout << "Dog is running." << std::endl;
+    }
+};
+
+class Fish : public Animal {
+public:
+    void makeSound() {
+        std::cout << "Fish is swimming silently." << std::endl;
+    }
+    void move() {
+        std::cout << "Fish is swimming." << std::endl;
+    }
+};
+
+int main() {
+    Animal* animal;
+    Dog dog;
+    Fish fish;
+
+    animal = &dog;
+    animal->makeSound(); // "Dog is barking."
+    animal->move(); // "Dog is running."
+
+    animal = &fish;
+    animal->makeSound(); // "Fish is swimming silently."
+    animal->move(); // "Fish is swimming."
+
+    return 0;
+}
