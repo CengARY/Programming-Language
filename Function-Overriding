@@ -1,0 +1,23 @@
+#include <iostream>
+
+class Animal {
+public:
+    virtual void makeSound() {
+        std::cout << "Animal is making a sound." << std::endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void makeSound() {
+        std::cout << "Dog is barking." << std::endl;
+    }
+};
+
+int main() {
+    Animal* animal = new Dog;
+    animal->makeSound(); // "Dog is barking."
+    delete animal;
+
+    return 0;
+}
